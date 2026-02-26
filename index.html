@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BootstrapVerse — All Tasks Combined</title>
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 4: Responsive Navbar with Dropdown + Search Bar
+════════════════════════════════════════════════════ -->
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand brand-logo" href="#">
+      <i class="bi bi-layers-fill me-2 text-accent"></i>BootstrapVerse
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#carousel-section">Carousel</a></li>
+        <li class="nav-item"><a class="nav-link" href="#pricing-section">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery-section">Gallery</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More
+            <span class="badge bg-accent ms-1">5</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#alerts-section"><i class="bi bi-bell me-2"></i>Alerts</a></li>
+            <li><a class="dropdown-item" href="#badges-section"><i class="bi bi-tag me-2"></i>Badges</a></li>
+            <li><a class="dropdown-item" href="#modal-section"><i class="bi bi-window me-2"></i>Modal</a></li>
+            <li><a class="dropdown-item" href="#forms-section"><i class="bi bi-ui-checks me-2"></i>Forms</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#tooltips-section"><i class="bi bi-chat-dots me-2"></i>Tooltips</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Search Bar -->
+      <form class="d-flex gap-2" role="search">
+        <input class="form-control form-control-sm search-input" type="search" placeholder="Search components…" />
+        <button class="btn btn-sm btn-accent" type="submit"><i class="bi bi-search"></i></button>
+      </form>
+      <button class="btn btn-outline-light btn-sm ms-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar">
+        <i class="bi bi-layout-sidebar-reverse"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 11: Offcanvas Sidebar
+════════════════════════════════════════════════════ -->
+<div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="offcanvasSidebar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><i class="bi bi-compass me-2 text-accent"></i>Navigation</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p class="text-muted small mb-3">Jump to any section</p>
+    <ul class="nav flex-column sidebar-nav">
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#carousel-section" data-bs-dismiss="offcanvas"><i class="bi bi-images me-2"></i>Carousel Slides</a></li>
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#pricing-section" data-bs-dismiss="offcanvas"><i class="bi bi-currency-dollar me-2"></i>Pricing Table</a></li>
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#gallery-section" data-bs-dismiss="offcanvas"><i class="bi bi-grid-3x3-gap me-2"></i>Gallery</a></li>
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#alerts-section" data-bs-dismiss="offcanvas"><i class="bi bi-bell me-2"></i>Alerts</a></li>
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#badges-section" data-bs-dismiss="offcanvas"><i class="bi bi-tag me-2"></i>Badges & Buttons</a></li>
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#modal-section" data-bs-dismiss="offcanvas"><i class="bi bi-window me-2"></i>Modal Demo</a></li>
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#forms-section" data-bs-dismiss="offcanvas"><i class="bi bi-ui-checks me-2"></i>Form Validation</a></li>
+      <li class="nav-item"><a class="nav-link sidebar-link" href="#tooltips-section" data-bs-dismiss="offcanvas"><i class="bi bi-chat-dots me-2"></i>Tooltips & Popovers</a></li>
+    </ul>
+    <hr class="border-secondary mt-4" />
+    <div class="p-3 rounded offcanvas-card">
+      <p class="small mb-1 fw-semibold">Bootstrap 5.3</p>
+      <p class="small text-muted mb-0">All 12 Tasks • One Page</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero-section text-center py-5">
+  <div class="container py-4">
+    <span class="badge badge-hero mb-3 px-3 py-2">12 Tasks · 1 Page · Bootstrap 5.3</span>
+    <h1 class="display-3 hero-title mb-3">Bootstrap<span class="text-accent">Verse</span></h1>
+    <p class="lead text-muted mx-auto" style="max-width:540px">A creative, cohesive showcase of every Bootstrap component — carousels, cards, modals, forms, galleries, and beyond.</p>
+    <div class="mt-4 d-flex gap-3 justify-content-center flex-wrap">
+      <a href="#carousel-section" class="btn btn-accent btn-lg px-4">Explore <i class="bi bi-arrow-down ms-1"></i></a>
+      <button class="btn btn-outline-secondary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#welcomeModal">
+        <i class="bi bi-play-circle me-1"></i> Quick Intro
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 8: Alerts
+════════════════════════════════════════════════════ -->
+<section id="alerts-section" class="py-5 section-alt">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 8</span>
+      <h2 class="section-title">Smart Alerts</h2>
+      <p class="text-muted">Contextual messages for every situation</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="alert alert-success alert-custom d-flex align-items-start gap-3" role="alert">
+          <i class="bi bi-check-circle-fill fs-4 flex-shrink-0 mt-1"></i>
+          <div>
+            <h6 class="fw-bold mb-1">Success! 🎉</h6>
+            <p class="mb-0 small">Your project has been saved and published successfully. All changes are live.</p>
+          </div>
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="alert alert-warning alert-custom d-flex align-items-start gap-3" role="alert">
+          <i class="bi bi-exclamation-triangle-fill fs-4 flex-shrink-0 mt-1"></i>
+          <div>
+            <h6 class="fw-bold mb-1">Warning ⚠️</h6>
+            <p class="mb-0 small">Your free plan expires in 3 days. Upgrade now to avoid interruption.</p>
+          </div>
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="alert alert-danger alert-custom d-flex align-items-start gap-3" role="alert">
+          <i class="bi bi-x-circle-fill fs-4 flex-shrink-0 mt-1"></i>
+          <div>
+            <h6 class="fw-bold mb-1">Error Detected 🚨</h6>
+            <p class="mb-0 small">Connection failed. Please check your network settings and try again.</p>
+          </div>
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="alert alert-info alert-custom d-flex align-items-start gap-3" role="alert">
+          <i class="bi bi-info-circle-fill fs-4 flex-shrink-0 mt-1"></i>
+          <div>
+            <h6 class="fw-bold mb-1">Did you know? 💡</h6>
+            <p class="mb-0 small">Bootstrap 5.3 added color mode support! Toggle between light and dark themes natively.</p>
+          </div>
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 1: Carousel with 3+ slides and custom captions
+════════════════════════════════════════════════════ -->
+<section id="carousel-section" class="py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 1</span>
+      <h2 class="section-title">Dynamic Carousel</h2>
+      <p class="text-muted">Three immersive slides with custom captions</p>
+    </div>
+    <div id="mainCarousel" class="carousel slide carousel-fade shadow-xl rounded-4 overflow-hidden" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-slide slide-1">
+            <div class="carousel-caption carousel-caption-custom">
+              <span class="slide-chip mb-2">Design Systems</span>
+              <h3 class="slide-title">Build Faster <br/>with Bootstrap</h3>
+              <p class="slide-desc">A powerful, extensible, and feature-packed frontend toolkit.</p>
+              <a href="#" class="btn btn-light btn-sm px-4 rounded-pill">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-slide slide-2">
+            <div class="carousel-caption carousel-caption-custom">
+              <span class="slide-chip mb-2">Responsive Grids</span>
+              <h3 class="slide-title">Pixel-Perfect <br/>Layouts</h3>
+              <p class="slide-desc">12-column grid that works flawlessly on every screen size.</p>
+              <a href="#" class="btn btn-light btn-sm px-4 rounded-pill">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-slide slide-3">
+            <div class="carousel-caption carousel-caption-custom">
+              <span class="slide-chip mb-2">Components</span>
+              <h3 class="slide-title">100+ Ready-Made <br/>Components</h3>
+              <p class="slide-desc">Modals, navbars, cards, buttons, forms — all included.</p>
+              <a href="#" class="btn btn-light btn-sm px-4 rounded-pill">Explore</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-slide slide-4">
+            <div class="carousel-caption carousel-caption-custom">
+              <span class="slide-chip mb-2">Utilities</span>
+              <h3 class="slide-title">Utility-First <br/>CSS Power</h3>
+              <p class="slide-desc">Hundreds of utility classes for spacing, color, flex, and more.</p>
+              <a href="#" class="btn btn-light btn-sm px-4 rounded-pill">Dive In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 2: Pricing Table with Cards + Grid
+════════════════════════════════════════════════════ -->
+<section id="pricing-section" class="py-5 section-alt">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 2</span>
+      <h2 class="section-title">Pricing Plans</h2>
+      <p class="text-muted">Choose the plan that fits your workflow</p>
+    </div>
+    <div class="row g-4 align-items-stretch justify-content-center">
+      <!-- Starter -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card pricing-card h-100">
+          <div class="card-body p-4">
+            <div class="pricing-icon mb-3"><i class="bi bi-feather"></i></div>
+            <h5 class="fw-bold">Starter</h5>
+            <div class="pricing-price mt-3 mb-1"><span class="display-5 fw-black">$0</span><span class="text-muted">/mo</span></div>
+            <p class="small text-muted mb-4">Perfect to get started</p>
+            <ul class="list-unstyled pricing-features">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>5 Projects</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 GB Storage</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Community Support</li>
+              <li class="text-muted"><i class="bi bi-x-circle me-2"></i>Custom Domain</li>
+              <li class="text-muted"><i class="bi bi-x-circle me-2"></i>Analytics</li>
+            </ul>
+          </div>
+          <div class="card-footer bg-transparent border-0 p-4 pt-0">
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Get Started Free</a>
+          </div>
+        </div>
+      </div>
+      <!-- Pro (Featured) -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card pricing-card pricing-featured h-100">
+          <div class="popular-badge">Most Popular</div>
+          <div class="card-body p-4">
+            <div class="pricing-icon pricing-icon-featured mb-3"><i class="bi bi-lightning-charge-fill"></i></div>
+            <h5 class="fw-bold text-white">Pro</h5>
+            <div class="pricing-price mt-3 mb-1"><span class="display-5 fw-black text-white">$29</span><span class="text-white-50">/mo</span></div>
+            <p class="small text-white-50 mb-4">For growing teams</p>
+            <ul class="list-unstyled pricing-features text-white">
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a5f3fc"></i>Unlimited Projects</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a5f3fc"></i>50 GB Storage</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a5f3fc"></i>Priority Support</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a5f3fc"></i>Custom Domain</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a5f3fc"></i>Advanced Analytics</li>
+            </ul>
+          </div>
+          <div class="card-footer bg-transparent border-0 p-4 pt-0">
+            <a href="#" class="btn btn-light w-100 rounded-pill fw-semibold">Start Pro Trial</a>
+          </div>
+        </div>
+      </div>
+      <!-- Enterprise -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card pricing-card h-100">
+          <div class="card-body p-4">
+            <div class="pricing-icon mb-3"><i class="bi bi-building"></i></div>
+            <h5 class="fw-bold">Enterprise</h5>
+            <div class="pricing-price mt-3 mb-1"><span class="display-5 fw-black">$99</span><span class="text-muted">/mo</span></div>
+            <p class="small text-muted mb-4">For large organizations</p>
+            <ul class="list-unstyled pricing-features">
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Unlimited Everything</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 TB Storage</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>Dedicated Support</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>White-labeling</li>
+              <li><i class="bi bi-check-circle-fill text-success me-2"></i>SLA Guarantee</li>
+            </ul>
+          </div>
+          <div class="card-footer bg-transparent border-0 p-4 pt-0">
+            <a href="#" class="btn btn-outline-primary w-100 rounded-pill">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Pricing Comparison Table ── -->
+    <div class="mt-5">
+      <h4 class="text-center mb-1">Feature Comparison</h4>
+      <p class="text-center text-muted mb-4">See what's included in each plan</p>
+
+      <div class="table-responsive">
+        <table class="table table-striped text-center align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th class="text-start">Feature</th>
+              <th>Starter ($0/mo)</th>
+              <th>Pro ($29/mo)</th>
+              <th>Enterprise ($99/mo)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start">Projects</td>
+              <td>5</td>
+              <td>Unlimited</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td class="text-start">Team Members</td>
+              <td>1</td>
+              <td>Up to 20</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td class="text-start">Storage</td>
+              <td>1 GB</td>
+              <td>50 GB</td>
+              <td>1 TB</td>
+            </tr>
+            <tr>
+              <td class="text-start">API Requests / month</td>
+              <td>1,000</td>
+              <td>100,000</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td class="text-start">Custom Domain</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="text-start">Advanced Analytics</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="text-start">A/B Testing</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="text-start">White Labeling</td>
+              <td>No</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="text-start">SSO / SAML</td>
+              <td>No</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="text-start">Support</td>
+              <td>Community</td>
+              <td>Email + Chat</td>
+              <td>Dedicated Manager</td>
+            </tr>
+            <tr>
+              <td class="text-start">Response Time</td>
+              <td>72 hrs</td>
+              <td>8 hrs</td>
+              <td>1 hr SLA</td>
+            </tr>
+            <tr>
+              <td class="text-start">Uptime SLA</td>
+              <td>—</td>
+              <td>99.9%</td>
+              <td>99.99%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- END Comparison Table -->
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 7: Grid-based Gallery (Responsive)
+════════════════════════════════════════════════════ -->
+<section id="gallery-section" class="py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 7</span>
+      <h2 class="section-title">Creative Gallery</h2>
+      <p class="text-muted">Responsive grid that adapts to every screen size</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-4 col-lg-3"><div class="gallery-item gi-1"><div class="gallery-overlay"><span>Design</span></div></div></div>
+      <div class="col-6 col-md-4 col-lg-3"><div class="gallery-item gi-2"><div class="gallery-overlay"><span>Typography</span></div></div></div>
+      <div class="col-6 col-md-4 col-lg-6"><div class="gallery-item gi-3 gallery-wide"><div class="gallery-overlay"><span>Color Theory</span></div></div></div>
+      <div class="col-6 col-md-6 col-lg-3"><div class="gallery-item gi-4"><div class="gallery-overlay"><span>Motion</span></div></div></div>
+      <div class="col-6 col-md-6 col-lg-3"><div class="gallery-item gi-5"><div class="gallery-overlay"><span>Layouts</span></div></div></div>
+      <div class="col-12 col-md-12 col-lg-6"><div class="gallery-item gi-6 gallery-wide"><div class="gallery-overlay"><span>Interaction</span></div></div></div>
+      <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item gi-1"><div class="gallery-overlay"><span>Grids</span></div></div></div>
+      <div class="col-6 col-md-4 col-lg-4"><div class="gallery-item gi-3"><div class="gallery-overlay"><span>Animation</span></div></div></div>
+      <div class="col-12 col-md-4 col-lg-4"><div class="gallery-item gi-5"><div class="gallery-overlay"><span>Components</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 9: Badges & Buttons (colors, sizes)
+════════════════════════════════════════════════════ -->
+<section id="badges-section" class="py-5 section-alt">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 9</span>
+      <h2 class="section-title">Badges & Buttons</h2>
+      <p class="text-muted">Various colors, sizes, and styles</p>
+    </div>
+    <div class="row g-5">
+      <!-- Badges -->
+      <div class="col-lg-6">
+        <h5 class="fw-semibold mb-4 text-muted text-uppercase tracking-wide" style="font-size:.75rem;letter-spacing:.1em">Badges</h5>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="badge bg-primary fs-6 px-3 py-2">Primary</span>
+          <span class="badge bg-secondary fs-6 px-3 py-2">Secondary</span>
+          <span class="badge bg-success fs-6 px-3 py-2">Success</span>
+          <span class="badge bg-danger fs-6 px-3 py-2">Danger</span>
+          <span class="badge bg-warning text-dark fs-6 px-3 py-2">Warning</span>
+          <span class="badge bg-info text-dark fs-6 px-3 py-2">Info</span>
+          <span class="badge bg-dark fs-6 px-3 py-2">Dark</span>
+        </div>
+        <h6 class="text-muted mb-3 small">Pill Badges</h6>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="badge rounded-pill bg-primary px-3">New</span>
+          <span class="badge rounded-pill bg-success px-3">Live</span>
+          <span class="badge rounded-pill bg-danger px-3">Hot 🔥</span>
+          <span class="badge rounded-pill bg-warning text-dark px-3">Sale</span>
+          <span class="badge rounded-pill bg-info text-dark px-3">Beta</span>
+        </div>
+        <h6 class="text-muted mb-3 small">Notification Badges</h6>
+        <div class="d-flex gap-4">
+          <button class="btn btn-primary position-relative">
+            Inbox <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">14</span>
+          </button>
+          <button class="btn btn-secondary position-relative">
+            Alerts <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">3</span>
+          </button>
+          <button class="btn btn-dark position-relative">
+            Updates <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">99+</span>
+          </button>
+        </div>
+      </div>
+      <!-- Buttons -->
+      <div class="col-lg-6">
+        <h5 class="fw-semibold mb-4 text-muted text-uppercase" style="font-size:.75rem;letter-spacing:.1em">Buttons — Sizes</h5>
+        <div class="d-flex flex-wrap gap-2 align-items-center mb-4">
+          <button class="btn btn-primary btn-lg">Large</button>
+          <button class="btn btn-primary">Default</button>
+          <button class="btn btn-primary btn-sm">Small</button>
+        </div>
+        <h6 class="text-muted mb-3 small">Styles</h6>
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <button class="btn btn-primary"><i class="bi bi-star-fill me-1"></i>Filled</button>
+          <button class="btn btn-outline-primary">Outlined</button>
+          <button class="btn btn-primary rounded-pill px-4">Pill</button>
+          <button class="btn btn-primary rounded-0">Square</button>
+          <button class="btn btn-primary disabled">Disabled</button>
+        </div>
+        <h6 class="text-muted mb-3 small">Full Palette</h6>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-primary btn-sm">Primary</button>
+          <button class="btn btn-secondary btn-sm">Secondary</button>
+          <button class="btn btn-success btn-sm">Success</button>
+          <button class="btn btn-danger btn-sm">Danger</button>
+          <button class="btn btn-warning btn-sm">Warning</button>
+          <button class="btn btn-info btn-sm">Info</button>
+          <button class="btn btn-dark btn-sm">Dark</button>
+          <button class="btn btn-light btn-sm border">Light</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 5: Modal
+════════════════════════════════════════════════════ -->
+<section id="modal-section" class="py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 5</span>
+      <h2 class="section-title">Interactive Modals</h2>
+      <p class="text-muted">Click to open layered content overlays</p>
+    </div>
+    <div class="row g-3 justify-content-center">
+      <div class="col-sm-4 col-md-3">
+        <button class="btn btn-primary w-100 py-3" data-bs-toggle="modal" data-bs-target="#welcomeModal">
+          <i class="bi bi-play-fill d-block fs-3 mb-1"></i>Welcome Modal
+        </button>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <button class="btn btn-success w-100 py-3" data-bs-toggle="modal" data-bs-target="#confirmModal">
+          <i class="bi bi-check2-circle d-block fs-3 mb-1"></i>Confirm Action
+        </button>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <button class="btn btn-danger w-100 py-3" data-bs-toggle="modal" data-bs-target="#deleteModal">
+          <i class="bi bi-trash3 d-block fs-3 mb-1"></i>Delete Warning
+        </button>
+      </div>
+      <div class="col-sm-4 col-md-3">
+        <button class="btn btn-info text-white w-100 py-3" data-bs-toggle="modal" data-bs-target="#infoModal">
+          <i class="bi bi-info-circle d-block fs-3 mb-1"></i>Info Modal
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div class="modal fade" id="welcomeModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-custom">
+      <div class="modal-header border-0 pb-0">
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center p-4">
+        <div class="modal-icon bg-primary bg-opacity-10 text-primary"><i class="bi bi-stars fs-2"></i></div>
+        <h4 class="fw-bold mt-3">Welcome to BootstrapVerse!</h4>
+        <p class="text-muted">This page demonstrates all 12 Bootstrap tasks in one cohesive, creative design. Scroll through to explore every component.</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center pt-0 pb-4">
+        <button class="btn btn-primary px-5 rounded-pill" data-bs-dismiss="modal">Let's Explore!</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="confirmModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content modal-custom">
+      <div class="modal-body text-center p-4">
+        <div class="modal-icon bg-success bg-opacity-10 text-success"><i class="bi bi-check-lg fs-2"></i></div>
+        <h5 class="fw-bold mt-3">Confirm Action</h5>
+        <p class="text-muted small">Are you sure you want to proceed? This action will save your current progress.</p>
+        <div class="d-flex gap-2 justify-content-center mt-3">
+          <button class="btn btn-outline-secondary btn-sm px-4" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-success btn-sm px-4" data-bs-dismiss="modal">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content modal-custom">
+      <div class="modal-body text-center p-4">
+        <div class="modal-icon bg-danger bg-opacity-10 text-danger"><i class="bi bi-exclamation-triangle fs-2"></i></div>
+        <h5 class="fw-bold mt-3">Delete Item?</h5>
+        <p class="text-muted small">This action cannot be undone. The item will be permanently removed from your account.</p>
+        <div class="d-flex gap-2 justify-content-center mt-3">
+          <button class="btn btn-outline-secondary btn-sm px-4" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-danger btn-sm px-4" data-bs-dismiss="modal">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="infoModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-custom">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold"><i class="bi bi-info-circle-fill text-info me-2"></i>Bootstrap Tips</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="list-group list-group-flush">
+          <div class="list-group-item border-0 ps-0"><i class="bi bi-lightning-fill text-warning me-2"></i>Use utility classes to avoid writing custom CSS</div>
+          <div class="list-group-item border-0 ps-0"><i class="bi bi-grid-fill text-primary me-2"></i>The 12-column grid is mobile-first by default</div>
+          <div class="list-group-item border-0 ps-0"><i class="bi bi-palette-fill text-success me-2"></i>CSS variables make theming effortless in BS 5.3</div>
+          <div class="list-group-item border-0 ps-0"><i class="bi bi-phone-fill text-info me-2"></i>Always test components on mobile screens</div>
+        </div>
+      </div>
+      <div class="modal-footer border-0">
+        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+        <a href="https://getbootstrap.com/docs/5.3" target="_blank" class="btn btn-info text-white btn-sm">Read Docs</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 6: Forms with Validation
+════════════════════════════════════════════════════ -->
+<section id="forms-section" class="py-5 section-alt">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 6</span>
+      <h2 class="section-title">Form Validation</h2>
+      <p class="text-muted">Inputs, checkboxes, radio buttons with live feedback</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card form-card shadow-lg border-0">
+          <div class="card-body p-4 p-md-5">
+            <h5 class="fw-bold mb-1">Create Your Account</h5>
+            <p class="text-muted small mb-4">Fill in the details below. All fields are required.</p>
+            <form class="needs-validation" novalidate id="signupForm">
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label fw-semibold small">First Name</label>
+                  <input type="text" class="form-control" placeholder="Jane" required />
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please enter your first name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label fw-semibold small">Last Name</label>
+                  <input type="text" class="form-control" placeholder="Doe" required />
+                  <div class="valid-feedback">Looks good!</div>
+                  <div class="invalid-feedback">Please enter your last name.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold small">Email Address</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="jane@example.com" required />
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold small">Password</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                    <input type="password" class="form-control" placeholder="Min 8 characters" minlength="8" required />
+                    <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label fw-semibold small">Account Type</label>
+                  <div class="d-flex gap-4 mt-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="role" id="personal" value="personal" required />
+                      <label class="form-check-label" for="personal">Personal</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="role" id="business" value="business" />
+                      <label class="form-check-label" for="business">Business</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="role" id="edu" value="edu" />
+                      <label class="form-check-label" for="edu">Student</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label fw-semibold small">Plan</label>
+                  <select class="form-select" required>
+                    <option value="">Choose a plan…</option>
+                    <option>Starter (Free)</option>
+                    <option>Pro ($29/mo)</option>
+                    <option>Enterprise ($99/mo)</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a plan.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label fw-semibold small d-block">Notifications</label>
+                  <div class="d-flex flex-wrap gap-3">
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="chkEmail" checked /><label class="form-check-label small" for="chkEmail">Email updates</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="chkSMS" /><label class="form-check-label small" for="chkSMS">SMS alerts</label></div>
+                    <div class="form-check"><input class="form-check-input" type="checkbox" id="chkNews" /><label class="form-check-label small" for="chkNews">Newsletter</label></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="agreeTerms" required />
+                    <label class="form-check-label small" for="agreeTerms">I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a></label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                  </div>
+                </div>
+                <div class="col-12 mt-2">
+                  <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+                    <i class="bi bi-person-plus me-2"></i>Create Account
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 10: Bootstrap Utilities
+════════════════════════════════════════════════════ -->
+<section id="utilities-section" class="py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 10</span>
+      <h2 class="section-title">Bootstrap Utilities</h2>
+      <p class="text-muted">Spacing, colors, shadows, text alignment in action</p>
+    </div>
+    <div class="row g-4">
+      <!-- Shadows -->
+      <div class="col-md-6 col-lg-3">
+        <h6 class="small fw-semibold text-muted text-uppercase mb-3">Shadows</h6>
+        <div class="p-3 bg-white shadow-none rounded mb-2 border small">shadow-none</div>
+        <div class="p-3 bg-white shadow-sm rounded mb-2 small">shadow-sm</div>
+        <div class="p-3 bg-white shadow rounded mb-2 small">shadow</div>
+        <div class="p-3 bg-white shadow-lg rounded small">shadow-lg</div>
+      </div>
+      <!-- Text Alignment -->
+      <div class="col-md-6 col-lg-3">
+        <h6 class="small fw-semibold text-muted text-uppercase mb-3">Text Alignment</h6>
+        <div class="bg-light p-2 rounded mb-2 text-start small">text-start</div>
+        <div class="bg-light p-2 rounded mb-2 text-center small">text-center</div>
+        <div class="bg-light p-2 rounded mb-2 text-end small">text-end</div>
+        <div class="bg-light p-2 rounded small fw-bold">fw-bold</div>
+        <div class="bg-light p-2 rounded small fst-italic">fst-italic</div>
+      </div>
+      <!-- Colors -->
+      <div class="col-md-6 col-lg-3">
+        <h6 class="small fw-semibold text-muted text-uppercase mb-3">Background Colors</h6>
+        <div class="d-flex flex-wrap gap-1">
+          <div class="p-3 rounded bg-primary" title="primary"></div>
+          <div class="p-3 rounded bg-secondary" title="secondary"></div>
+          <div class="p-3 rounded bg-success" title="success"></div>
+          <div class="p-3 rounded bg-danger" title="danger"></div>
+          <div class="p-3 rounded bg-warning" title="warning"></div>
+          <div class="p-3 rounded bg-info" title="info"></div>
+          <div class="p-3 rounded bg-dark" title="dark"></div>
+          <div class="p-3 rounded bg-light border" title="light"></div>
+        </div>
+        <h6 class="small fw-semibold text-muted text-uppercase mb-2 mt-3">Opacity</h6>
+        <div class="d-flex gap-1">
+          <div class="p-3 rounded bg-primary bg-opacity-100" style="width:30px"></div>
+          <div class="p-3 rounded bg-primary bg-opacity-75" style="width:30px"></div>
+          <div class="p-3 rounded bg-primary bg-opacity-50" style="width:30px"></div>
+          <div class="p-3 rounded bg-primary bg-opacity-25" style="width:30px"></div>
+          <div class="p-3 rounded bg-primary bg-opacity-10" style="width:30px"></div>
+        </div>
+      </div>
+      <!-- Spacing & Borders -->
+      <div class="col-md-6 col-lg-3">
+        <h6 class="small fw-semibold text-muted text-uppercase mb-3">Spacing & Borders</h6>
+        <div class="border p-1 mb-1 rounded small text-center">p-1</div>
+        <div class="border p-2 mb-1 rounded small text-center">p-2</div>
+        <div class="border p-3 mb-1 rounded small text-center">p-3</div>
+        <div class="border p-4 rounded small text-center">p-4</div>
+        <h6 class="small fw-semibold text-muted text-uppercase mb-2 mt-3">Border Radius</h6>
+        <div class="d-flex gap-2 flex-wrap">
+          <div class="bg-primary p-2" style="width:36px;height:36px"></div>
+          <div class="bg-primary p-2 rounded-1" style="width:36px;height:36px"></div>
+          <div class="bg-primary p-2 rounded-3" style="width:36px;height:36px"></div>
+          <div class="bg-primary p-2 rounded-circle" style="width:36px;height:36px"></div>
+          <div class="bg-primary p-2 rounded-pill" style="width:60px;height:36px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 12: Tooltips & Popovers
+════════════════════════════════════════════════════ -->
+<section id="tooltips-section" class="py-5 section-alt">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Task 12</span>
+      <h2 class="section-title">Tooltips & Popovers</h2>
+      <p class="text-muted">Hover or click for extra information</p>
+    </div>
+    <div class="row g-5">
+      <!-- Tooltips -->
+      <div class="col-lg-6">
+        <h6 class="fw-semibold mb-4">Tooltips — Hover me</h6>
+        <div class="d-flex flex-wrap gap-3">
+          <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top!">Top</button>
+          <button class="btn btn-outline-success" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on the right!">Right</button>
+          <button class="btn btn-outline-warning" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on the bottom!">Bottom</button>
+          <button class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on the left!">Left</button>
+          <button class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="Bootstrap 5.3 tooltips use Popper.js under the hood!">
+            <i class="bi bi-info-circle me-1"></i>Pro Tip
+          </button>
+        </div>
+        <div class="mt-4">
+          <h6 class="fw-semibold mb-3">Inline Tooltip Examples</h6>
+          <p class="text-muted small">
+            Bootstrap provides a 
+            <a href="#" data-bs-toggle="tooltip" title="A mobile-first CSS framework">powerful toolkit</a> 
+            that helps you build 
+            <a href="#" data-bs-toggle="tooltip" title="Works on phones, tablets, and desktops">responsive layouts</a> 
+            quickly using 
+            <a href="#" data-bs-toggle="tooltip" title="Pre-built HTML elements">pre-designed components</a>.
+          </p>
+        </div>
+      </div>
+      <!-- Popovers -->
+      <div class="col-lg-6">
+        <h6 class="fw-semibold mb-4">Popovers — Click me</h6>
+        <div class="d-flex flex-wrap gap-3">
+          <button class="btn btn-primary" data-bs-toggle="popover" data-bs-title="🚀 Quick Start" data-bs-content="Install Bootstrap via npm: npm i bootstrap. Then import CSS and JS in your project!" data-bs-trigger="click">
+            Quick Start
+          </button>
+          <button class="btn btn-success" data-bs-toggle="popover" data-bs-title="✅ Grid System" data-bs-content="Use .container, .row, and .col-* classes. Supports xs, sm, md, lg, xl, and xxl breakpoints." data-bs-trigger="click">
+            Grid System
+          </button>
+          <button class="btn btn-danger" data-bs-toggle="popover" data-bs-title="🎨 Theming" data-bs-content="Override CSS variables like --bs-primary to customize the entire theme without writing extra CSS!" data-bs-trigger="click">
+            Theming
+          </button>
+        </div>
+        <div class="mt-4 p-3 bg-white rounded-3 border">
+          <p class="small text-muted mb-2 fw-semibold">Popover on Icon</p>
+          <div class="d-flex align-items-center gap-2">
+            <span>Grid Breakpoints</span>
+            <i class="bi bi-question-circle-fill text-primary" 
+               data-bs-toggle="popover" 
+               data-bs-trigger="click"
+               data-bs-title="Breakpoints" 
+               data-bs-content="xs:<576px, sm:≥576px, md:≥768px, lg:≥992px, xl:≥1200px, xxl:≥1400px"
+               style="cursor:pointer"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  COMPARE TABLE — All 12 Tasks at a Glance
+════════════════════════════════════════════════════ -->
+<section id="compare-section" class="py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <span class="section-tag">Summary</span>
+      <h2 class="section-title">Task Comparison Table</h2>
+      <p class="text-muted">All 12 Bootstrap tasks — what's used, where, and status</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4" id="tableFilters">
+      <button class="btn btn-sm btn-accent filter-btn active" data-filter="all">All Tasks</button>
+      <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="layout">Layout</button>
+      <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="component">Component</button>
+      <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="utility">Utility</button>
+      <button class="btn btn-sm btn-outline-secondary filter-btn" data-filter="interactive">Interactive</button>
+    </div>
+
+    <div class="table-responsive shadow-lg rounded-4 overflow-hidden">
+      <table class="table table-hover compare-table mb-0">
+        <thead>
+          <tr class="compare-thead">
+            <th style="width:50px">#</th>
+            <th>Task Name</th>
+            <th>Category</th>
+            <th>Key Bootstrap Classes</th>
+            <th>Section</th>
+            <th>Difficulty</th>
+            <th class="text-center">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-category="component">
+            <td><span class="task-num">01</span></td>
+            <td>
+              <strong>Carousel</strong>
+              <div class="text-muted small">3+ slides with custom captions</div>
+            </td>
+            <td><span class="badge cat-component">Component</span></td>
+            <td><code>.carousel</code> <code>.carousel-item</code> <code>.carousel-caption</code></td>
+            <td><a href="#carousel-section" class="link-accent">↗ Carousel</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:60%;background:#f59e0b"></div>
+              </div>
+              <span class="small text-muted">Medium</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="layout">
+            <td><span class="task-num">02</span></td>
+            <td>
+              <strong>Pricing Table</strong>
+              <div class="text-muted small">Cards with grid layout</div>
+            </td>
+            <td><span class="badge cat-layout">Layout</span></td>
+            <td><code>.card</code> <code>.col-md-4</code> <code>.align-items-stretch</code></td>
+            <td><a href="#pricing-section" class="link-accent">↗ Pricing</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:45%;background:#10b981"></div>
+              </div>
+              <span class="small text-muted">Easy</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="layout">
+            <td><span class="task-num">03</span></td>
+            <td>
+              <strong>Sticky Footer</strong>
+              <div class="text-muted small">Utility-based layout</div>
+            </td>
+            <td><span class="badge cat-layout">Layout</span></td>
+            <td><code>d-flex</code> <code>flex-column</code> <code>min-vh-100</code> <code>mt-auto</code></td>
+            <td><a href="#" class="link-accent">↗ Footer</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:30%;background:#10b981"></div>
+              </div>
+              <span class="small text-muted">Easy</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="component">
+            <td><span class="task-num">04</span></td>
+            <td>
+              <strong>Responsive Navbar</strong>
+              <div class="text-muted small">Dropdown menus + search bar</div>
+            </td>
+            <td><span class="badge cat-component">Component</span></td>
+            <td><code>.navbar</code> <code>.navbar-expand-lg</code> <code>.dropdown</code> <code>.form-control</code></td>
+            <td><a href="#mainNav" class="link-accent">↗ Top Nav</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:70%;background:#f59e0b"></div>
+              </div>
+              <span class="small text-muted">Medium</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="interactive">
+            <td><span class="task-num">05</span></td>
+            <td>
+              <strong>Modals</strong>
+              <div class="text-muted small">Content on button click</div>
+            </td>
+            <td><span class="badge cat-interactive">Interactive</span></td>
+            <td><code>.modal</code> <code>.modal-dialog</code> <code>data-bs-toggle="modal"</code></td>
+            <td><a href="#modal-section" class="link-accent">↗ Modals</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:45%;background:#10b981"></div>
+              </div>
+              <span class="small text-muted">Easy</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="interactive">
+            <td><span class="task-num">06</span></td>
+            <td>
+              <strong>Form Validation</strong>
+              <div class="text-muted small">Inputs, checkboxes, radios, submit</div>
+            </td>
+            <td><span class="badge cat-interactive">Interactive</span></td>
+            <td><code>.needs-validation</code> <code>.form-check</code> <code>.was-validated</code> <code>.invalid-feedback</code></td>
+            <td><a href="#forms-section" class="link-accent">↗ Forms</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:80%;background:#ef4444"></div>
+              </div>
+              <span class="small text-muted">Hard</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="layout">
+            <td><span class="task-num">07</span></td>
+            <td>
+              <strong>Responsive Gallery</strong>
+              <div class="text-muted small">Grid-based, multi-breakpoint</div>
+            </td>
+            <td><span class="badge cat-layout">Layout</span></td>
+            <td><code>.col-6</code> <code>.col-md-4</code> <code>.col-lg-3</code> <code>.g-3</code></td>
+            <td><a href="#gallery-section" class="link-accent">↗ Gallery</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:45%;background:#10b981"></div>
+              </div>
+              <span class="small text-muted">Easy</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="component">
+            <td><span class="task-num">08</span></td>
+            <td>
+              <strong>Alerts</strong>
+              <div class="text-muted small">Success, Warning, Danger, Info</div>
+            </td>
+            <td><span class="badge cat-component">Component</span></td>
+            <td><code>.alert</code> <code>.alert-success</code> <code>.alert-dismissible</code> <code>data-bs-dismiss</code></td>
+            <td><a href="#alerts-section" class="link-accent">↗ Alerts</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:25%;background:#10b981"></div>
+              </div>
+              <span class="small text-muted">Easy</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="component">
+            <td><span class="task-num">09</span></td>
+            <td>
+              <strong>Badges & Buttons</strong>
+              <div class="text-muted small">Colors, sizes, styles</div>
+            </td>
+            <td><span class="badge cat-component">Component</span></td>
+            <td><code>.badge</code> <code>.rounded-pill</code> <code>.btn-lg</code> <code>.btn-sm</code> <code>.btn-outline-*</code></td>
+            <td><a href="#badges-section" class="link-accent">↗ Badges</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:25%;background:#10b981"></div>
+              </div>
+              <span class="small text-muted">Easy</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="utility">
+            <td><span class="task-num">10</span></td>
+            <td>
+              <strong>Bootstrap Utilities</strong>
+              <div class="text-muted small">Spacing, text, colors, shadows</div>
+            </td>
+            <td><span class="badge cat-utility">Utility</span></td>
+            <td><code>.shadow-lg</code> <code>.text-center</code> <code>.bg-primary</code> <code>.p-4</code> <code>.rounded-circle</code></td>
+            <td><a href="#utilities-section" class="link-accent">↗ Utilities</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:35%;background:#10b981"></div>
+              </div>
+              <span class="small text-muted">Easy</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="interactive">
+            <td><span class="task-num">11</span></td>
+            <td>
+              <strong>Offcanvas Sidebar</strong>
+              <div class="text-muted small">Slide-in navigation panel</div>
+            </td>
+            <td><span class="badge cat-interactive">Interactive</span></td>
+            <td><code>.offcanvas</code> <code>.offcanvas-end</code> <code>data-bs-toggle="offcanvas"</code></td>
+            <td><a href="#" class="link-accent">↗ Sidebar</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:55%;background:#f59e0b"></div>
+              </div>
+              <span class="small text-muted">Medium</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+          <tr data-category="interactive">
+            <td><span class="task-num">12</span></td>
+            <td>
+              <strong>Tooltips & Popovers</strong>
+              <div class="text-muted small">Extra info on hover/click</div>
+            </td>
+            <td><span class="badge cat-interactive">Interactive</span></td>
+            <td><code>data-bs-toggle="tooltip"</code> <code>data-bs-placement</code> <code>data-bs-toggle="popover"</code></td>
+            <td><a href="#tooltips-section" class="link-accent">↗ Tooltips</a></td>
+            <td>
+              <div class="diff-bar">
+                <div class="diff-fill" style="width:55%;background:#f59e0b"></div>
+              </div>
+              <span class="small text-muted">Medium</span>
+            </td>
+            <td class="text-center"><span class="badge bg-success px-3">✓ Done</span></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="compare-tfoot">
+            <td colspan="6" class="fw-semibold">Total Completion</td>
+            <td class="text-center">
+              <span class="badge bg-accent px-3 py-2 fs-6">12 / 12 ✓</span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="row g-3 mt-4 text-center">
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num text-primary">4</div>
+          <div class="stat-label">Layout Tasks</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num text-success">4</div>
+          <div class="stat-label">Component Tasks</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num text-warning">4</div>
+          <div class="stat-label">Interactive Tasks</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num text-info">1</div>
+          <div class="stat-label">Utility Task</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+  TASK 3: Sticky Footer Layout
+════════════════════════════════════════════════════ -->
+<footer class="custom-footer mt-auto py-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <h5 class="footer-brand"><i class="bi bi-layers-fill me-2 text-accent"></i>BootstrapVerse</h5>
+        <p class="text-muted small mt-2 mb-3">A creative showcase of all 12 Bootstrap 5.3 tasks combined into one cohesive, responsive webpage.</p>
+        <div class="d-flex gap-2">
+          <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" data-bs-toggle="tooltip" title="GitHub"><i class="bi bi-github"></i></a>
+          <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" data-bs-toggle="tooltip" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" data-bs-toggle="tooltip" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="footer-heading">Components</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#carousel-section">Carousel</a></li>
+          <li><a href="#pricing-section">Pricing</a></li>
+          <li><a href="#gallery-section">Gallery</a></li>
+          <li><a href="#modal-section">Modal</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="footer-heading">Utilities</h6>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#alerts-section">Alerts</a></li>
+          <li><a href="#badges-section">Badges</a></li>
+          <li><a href="#forms-section">Forms</a></li>
+          <li><a href="#tooltips-section">Tooltips</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="footer-heading">Stay Updated</h6>
+        <p class="text-muted small mb-2">Subscribe to Bootstrap tips and tricks</p>
+        <div class="input-group input-group-sm">
+          <input type="email" class="form-control" placeholder="your@email.com" />
+          <button class="btn btn-accent">Subscribe</button>
+        </div>
+        <p class="text-muted mt-3" style="font-size:.7rem">
+          Built with <i class="bi bi-heart-fill text-danger"></i> using Bootstrap 5.3
+          <span class="badge bg-accent ms-1">All 12 Tasks</span>
+        </p>
+      </div>
+    </div>
+    <hr class="border-secondary mt-4 mb-3" />
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-muted" style="font-size:.75rem">
+      <span>© 2025 BootstrapVerse. All rights reserved.</span>
+      <div class="d-flex gap-3 mt-2 mt-md-0">
+        <a href="#" class="text-muted text-decoration-none">Privacy</a>
+        <a href="#" class="text-muted text-decoration-none">Terms</a>
+        <a href="#" class="text-muted text-decoration-none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Initialize tooltips
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el));
+  // Initialize popovers
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => new bootstrap.Popover(el));
+
+  // Compare table filter
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('btn-accent','active');
+        b.classList.add('btn-outline-secondary');
+      });
+      btn.classList.add('btn-accent','active');
+      btn.classList.remove('btn-outline-secondary');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('tbody tr[data-category]').forEach(row => {
+        row.style.display = (filter === 'all' || row.dataset.category === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  // Form validation
+  const form = document.getElementById('signupForm');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    form.classList.add('was-validated');
+    if (form.checkValidity()) {
+      const btn = form.querySelector('[type=submit]');
+      btn.innerHTML = '<i class="bi bi-check-circle-fill me-2"></i>Account Created!';
+      btn.classList.replace('btn-primary','btn-success');
+    }
+  });
+</script>
+</body>
+</html>
